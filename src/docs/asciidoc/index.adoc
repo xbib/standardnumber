@@ -1,0 +1,11 @@
+= Standard numbers for Java
+Jörg Prante
+Version 1.0
+:sectnums:
+:toc: preamble
+:toclevels: 4
+:!toc-title: Content
+:experimental:
+:description: Stndard number processing
+:keywords: Standard number, Java
+:icons: font

@@ -1,0 +1,4 @@
+= Standard numbers for Java
+Jörg Prante
+Version 1.0
+
