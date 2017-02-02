@@ -42,7 +42,7 @@ import java.util.regex.Pattern;
  * and the context of use. The DOI system provides, within networks of DOI applications,
  * for unique identification, persistence, resolution, metadata and semantic interoperability.
  */
-class DOI extends StandardNumber implements Cloneable, Comparable<DOI> {
+public class DOI extends StandardNumber implements Cloneable, Comparable<DOI> {
 
     private static final Pattern DOI_PATTERN =
             Pattern.compile("\\b10\\.\\d{4}([.][0-9]+)*/[a-z0-9/\\-.()<>_:;\\\\]+\\b");
@@ -56,13 +56,8 @@ class DOI extends StandardNumber implements Cloneable, Comparable<DOI> {
 
     private URI httpDxDoi;
 
-    protected DOI() {
+    public DOI() {
         super("doi");
-    }
-
-    @Override
-    public int compareTo(DOI doi) {
-        return doi != null ? normalizedValue().compareTo(doi.normalizedValue()) : -1;
     }
 
     @Override
@@ -139,6 +134,11 @@ class DOI extends StandardNumber implements Cloneable, Comparable<DOI> {
             this.httpDoi = URI.create("http://doi.org/" + value);
             this.httpDxDoi = URI.create("http://dx.doi.org/" + value);
         }
+    }
+
+    @Override
+    public int compareTo(DOI doi) {
+        return doi != null ? normalizedValue().compareTo(doi.normalizedValue()) : -1;
     }
 
     @Override

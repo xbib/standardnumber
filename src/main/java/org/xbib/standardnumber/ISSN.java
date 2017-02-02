@@ -1,7 +1,5 @@
 package org.xbib.standardnumber;
 
-import org.xbib.standardnumber.checksum.iso7064.MOD1110;
-
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.regex.Matcher;
@@ -57,7 +55,7 @@ import java.util.regex.Pattern;
  * These particularities themselves necessitated the introduction
  * of the ISSN.
  */
-class ISSN extends StandardNumber implements Cloneable, Comparable<ISSN> {
+public class ISSN extends StandardNumber implements Cloneable, Comparable<ISSN> {
 
     private static final Pattern PATTERN = Pattern.compile("[0-9]{4}\\p{Pd}?[0-9]{3}[0-9xX]");
 
@@ -65,7 +63,7 @@ class ISSN extends StandardNumber implements Cloneable, Comparable<ISSN> {
 
     private boolean createWithChecksum;
 
-    protected ISSN() {
+    public ISSN() {
         super("issn");
     }
 

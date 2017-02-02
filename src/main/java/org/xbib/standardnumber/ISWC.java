@@ -22,13 +22,13 @@ import java.util.regex.Pattern;
  * the system will deal with duplicate registrations by linking such registration records
  * in the ISWC database.
  */
-class ISWC extends StandardNumber implements Cloneable, Comparable<ISWC> {
+public class ISWC extends StandardNumber implements Cloneable, Comparable<ISWC> {
 
     private static final Pattern PATTERN = Pattern.compile("[\\p{Alnum}\\p{Pd}\\s]{10,13}");
 
     private String formatted;
 
-    protected ISWC() {
+    public ISWC() {
         super("iswc");
     }
 

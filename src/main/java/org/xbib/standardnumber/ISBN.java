@@ -44,7 +44,7 @@ import javax.xml.stream.events.XMLEvent;
  * link:http://www.iana.org/assignments/urn-namespaces[The IANA URN assignments, window='_blank'],
  * link:https://www.isbn-international.org/range_file_generation[ISBN prefix generation, window='_blank']
  */
-class ISBN extends StandardNumber implements Cloneable, Comparable<ISBN> {
+public class ISBN extends StandardNumber implements Cloneable, Comparable<ISBN> {
 
     private static final Pattern PATTERN = Pattern.compile("[\\p{Digit}xX\\p{Pd}]{10,17}");
 
@@ -60,7 +60,7 @@ class ISBN extends StandardNumber implements Cloneable, Comparable<ISBN> {
 
     private boolean isEAN;
 
-    protected ISBN() {
+    public ISBN() {
         super("isbn");
     }
 

@@ -15,9 +15,9 @@ import java.util.regex.Pattern;
  * and newspaper articles. Such an identifier consists of 16 numerical digits divided
  * into four blocks.
  *
- * Checksum calculation is in accordance to ISO/IEC 7064:2003, MOD 11-2
+ * Checksum calculation is in accordance to ISO/IEC 7064:2003, MOD 11-2.
  */
-class ISNI extends StandardNumber implements Cloneable, Comparable<ISNI> {
+public class ISNI extends StandardNumber implements Cloneable, Comparable<ISNI> {
 
     private static final Pattern PATTERN = Pattern.compile("[\\p{Digit}xX\\p{Pd}\\s]{16,24}");
 
@@ -27,7 +27,7 @@ class ISNI extends StandardNumber implements Cloneable, Comparable<ISNI> {
 
     private boolean createWithChecksum;
 
-    protected ISNI() {
+    public ISNI() {
         super("isni");
     }
 

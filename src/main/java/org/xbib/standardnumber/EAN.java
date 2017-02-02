@@ -12,13 +12,13 @@ import java.util.regex.Pattern;
  * Numbers encoded in UPC and EAN barcodes are known as
  * Global Trade Item Numbers (GTIN).
  */
-class EAN extends StandardNumber implements Cloneable, Comparable<EAN> {
+public class EAN extends StandardNumber implements Cloneable, Comparable<EAN> {
 
     private static final Pattern PATTERN = Pattern.compile("\\b[\\p{Digit}\\s]{13,18}\\b");
 
     private boolean createWithChecksum;
 
-    protected EAN() {
+    public EAN() {
         super("ean");
     }
 

@@ -40,13 +40,13 @@ import java.util.regex.Pattern;
  *
  * See link:http://www.gtin.info/[GTIN info, window='_blank']
  */
-class GTIN extends StandardNumber implements Cloneable, Comparable<GTIN> {
+public class GTIN extends StandardNumber implements Cloneable, Comparable<GTIN> {
 
     private static final Pattern PATTERN = Pattern.compile("\\b[\\p{Digit}\\-]{3,18}\\b");
 
     private boolean createWithChecksum;
 
-    protected GTIN() {
+    public GTIN() {
         super("gtin");
     }
 

@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
  * See link:http://support.d-nb.de/iltis/onlineRoutinen/Pruefziffernberechnung.htm[Prüfziffernberechnung in ILTIS, window='_blank'],
  * link:https://wiki.dnb.de/pages/viewpage.action?pageId=48139522[DNB Wiki, window='_blank']
  */
-class ZDB extends StandardNumber implements Cloneable, Comparable<ZDB> {
+public class ZDB extends StandardNumber implements Cloneable, Comparable<ZDB> {
 
     private static final Pattern PATTERN = Pattern.compile("^[\\p{Digit}]{2,10}\\p{Pd}{0,1}[\\p{Digit}xX]{1}\\b");
 
@@ -24,7 +24,7 @@ class ZDB extends StandardNumber implements Cloneable, Comparable<ZDB> {
 
     private boolean createWithChecksum;
 
-    protected ZDB() {
+    public ZDB() {
         super("zdb");
     }
 

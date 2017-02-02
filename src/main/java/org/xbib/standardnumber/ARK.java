@@ -26,7 +26,7 @@ import java.util.regex.Pattern;
  * See link:http://tools.ietf.org/html/draft-kunze-ark-18[ARK IETF RFC, window='_blank'],
  * link:http://www.cdlib.org/services/uc3/docs/jak_ARKs_Berlin_2012.pdf[10 years ARK, window='_blank']
  */
-class ARK extends StandardNumber implements Cloneable, Comparable<ARK> {
+public class ARK extends StandardNumber implements Cloneable, Comparable<ARK> {
 
     private static final Pattern PATTERN = Pattern.compile("[\\p{Graph}\\p{Punct}]{0,48}");
 
@@ -34,13 +34,8 @@ class ARK extends StandardNumber implements Cloneable, Comparable<ARK> {
 
     private URI uri;
 
-    protected ARK() {
+    public ARK() {
         super("ark");
-    }
-
-    @Override
-    public int compareTo(ARK ark) {
-        return ark != null ? normalizedValue().compareTo(ark.normalizedValue()) : -1;
     }
 
     @Override
@@ -112,9 +107,12 @@ class ARK extends StandardNumber implements Cloneable, Comparable<ARK> {
 
     @Override
     public Collection<String> getTypedVariants() {
-        return Arrays.asList(
-                type().toUpperCase() + " " + format(),
-                type().toUpperCase() + " " + normalizedValue());
+        return Arrays.asList(type().toUpperCase() + " " + format(), type().toUpperCase() + " " + normalizedValue());
+    }
+
+    @Override
+    public int compareTo(ARK ark) {
+        return ark != null ? normalizedValue().compareTo(ark.normalizedValue()) : -1;
     }
 
     @Override

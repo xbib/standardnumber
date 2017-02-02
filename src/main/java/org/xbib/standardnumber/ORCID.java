@@ -9,9 +9,9 @@ import java.net.URI;
  *
  * Checksum calculation is according to ISO/IEC 7064:2003, MOD 11-2.
  */
-class ORCID extends ISNI {
+public class ORCID extends ISNI {
 
-    protected ORCID() {
+    public ORCID() {
         super("orcid");
     }
 

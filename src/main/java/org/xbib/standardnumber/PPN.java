@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  * A catalog record numbering system, uniquely identifying records, used by PICA
  * (Project voor geIntegreerde Catalogus Automatisering) integrated library systems.
  */
-class PPN extends StandardNumber implements Cloneable, Comparable<PPN> {
+public class PPN extends StandardNumber implements Cloneable, Comparable<PPN> {
 
     private static final Pattern PATTERN = Pattern.compile("[\\p{Digit}]{3,10}\\p{Pd}{0,1}[\\p{Digit}xX]{1}\\b");
 
@@ -19,7 +19,7 @@ class PPN extends StandardNumber implements Cloneable, Comparable<PPN> {
 
     private boolean createWithChecksum;
 
-    protected PPN() {
+    public PPN() {
         super("ppn");
     }
 

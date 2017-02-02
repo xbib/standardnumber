@@ -24,13 +24,13 @@ import java.util.regex.Pattern;
  *
  * See link:http://www.ismn-international.org/download/Web_ISMN%20Manual_2008-3.pdf[ISMN Manual 2008, window='_blank']
  */
-class ISMN extends StandardNumber implements Cloneable, Comparable<ISMN> {
+public class ISMN extends StandardNumber implements Cloneable, Comparable<ISMN> {
 
     private static final Pattern PATTERN = Pattern.compile("[\\p{Digit}M\\p{Pd}]{0,17}");
 
     private boolean createWithChecksum;
 
-    protected ISMN() {
+    public ISMN() {
         super("ismn");
     }
 

@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
  *
  * Checksum calculation is in accordance to ISO 7064 MOD-97.
  */
-class IBAN extends StandardNumber implements Cloneable, Comparable<IBAN> {
+public class IBAN extends StandardNumber implements Cloneable, Comparable<IBAN> {
 
     /**
      * Norway = 15, Malta = 31 + "IBAN ".
@@ -57,7 +57,7 @@ class IBAN extends StandardNumber implements Cloneable, Comparable<IBAN> {
 
     private boolean createWithChecksum;
 
-    protected IBAN() {
+    public IBAN() {
         super("iban");
     }
 

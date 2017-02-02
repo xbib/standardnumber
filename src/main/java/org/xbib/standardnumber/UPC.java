@@ -22,13 +22,13 @@ import java.util.regex.Pattern;
  * All of these data structures follow the global GS1 specification which bases on
  * international standards.
  */
-class UPC extends StandardNumber implements Cloneable, Comparable<UPC> {
+public class UPC extends StandardNumber implements Cloneable, Comparable<UPC> {
 
     private static final Pattern PATTERN = Pattern.compile("[\\p{Digit}]{0,12}");
 
     private boolean createWithChecksum;
 
-    protected UPC() {
+    public UPC() {
         super("upc");
     }
 
