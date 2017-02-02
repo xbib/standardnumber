@@ -1,0 +1,57 @@
+= xbib Standard numbers for Java
+
+image:https://api.travis-ci.org/xbib/standardnumber.svg[title="Build status", link="https://travis-ci.org/xbib/standardnumber/"]
+image:https://img.shields.io/sonar/http/nemo.sonarqube.com/org.xbib%3Astandardnumber/coverage.svg?style=flat-square[title="Coverage", link="https://sonarqube.com/dashboard/index?id=org.xbib%3Astandardnumber"]
+image:https://maven-badges.herokuapp.com/maven-central/org.xbib/standardnumber/badge.svg[title="Maven Central", link="http://search.maven.org/#search%7Cga%7C1%7Cxbib%20standardnumber"]
+image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[title="Apache License 2.0", link="https://opensource.org/licenses/Apache-2.0"]
+image:https://img.shields.io/twitter/url/https/twitter.com/xbib.svg?style=social&label=Follow%20%40xbib[title="Twitter", link="https://twitter.com/xbib"]
+
+== What are standard numbers?
+
+Standard numbers are numbers that have a defined syntax, drafted and maintained by
+standard bodies, and embraced by organizations worldwide.
+Standard numbers are considered to be unique.
+They are assigned by the standard body or can be constructed in a specified manner to ensure uniqueness.
+They can be checked for validity and most of them carry checksums.
+
+The economic advantages of standard numbers are manifold
+
+* they are compact
+* they identify things or entities
+* they can be printed, recognized, and compared for identification
+* they can be processed by computers, for instance as a key in a database
+* they are globally available
+* they persist
+
+The Java API for standard numbers provides
+
+* a parser for standard numbers
+* a formatter for standard numbers
+* a checksum calculator
+* and a validator for standard numbers
+
+The following standard numbers are implemented
+
+ARK, DOI, EAN, GTIN, IBAN, ISAN, ISBN, ISMN, ISNI, ISSN, ISTC, ISWC, ORCID, PPN, SICI, UPC, ZDB
+
+= Documentation
+
+The documentation is available link:https://xbib.github.io/standardnumber/[here].
+
+== License
+
+Copyright (C) 2016 Jörg Prante
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+you may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+image:https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[title="PayPal", link="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVHFQYZ9WZ8HG"]

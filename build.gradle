@@ -72,7 +72,6 @@ javadoc {
     options.docletpath = configurations.asciidoclet.files.asType(List)
     options.doclet = 'org.asciidoctor.Asciidoclet'
     options.overview = "src/docs/asciidoclet/overview.adoc"
-    options.showFromPrivate()
     options.addStringOption "-base-dir", "${projectDir}"
     options.addStringOption "-attribute",
             "name=${project.name},version=${project.version},title-link=https://github.com/xbib/${project.name}"
