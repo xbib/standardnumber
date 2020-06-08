@@ -1,13 +1,12 @@
 package org.xbib.standardnumber;
 
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 /**
  *
  */
-
 public class ISSNTests {
 
     @Test
@@ -37,9 +36,11 @@ public class ISSNTests {
         assertEquals(issn.createChecksum(true).toGTIN("03").normalizedValue(), "9770729011038");
     }
 
-    @Test(expected = NumberFormatException.class)
-    public void testNonISSN() throws Exception {
-        String value = "linux";
-        new ISSN().set(value).createChecksum(true).normalize().verify();
+    @Test
+    public void testNonISSN() {
+        Assertions.assertThrows(NumberFormatException.class, () -> {
+            String value = "linux";
+            new ISSN().set(value).createChecksum(true).normalize().verify();
+        });
     }
 }

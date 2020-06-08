@@ -1,8 +1,0 @@
-ext {
-    user = 'xbib'
-    projectName = 'standardnumber'
-    projectDescription = 'Standardnumber processing for Java'
-    scmUrl = 'https://github.com/xbib/standardnumber'
-    scmConnection = 'scm:git:git://github.com/xbib/standardnumber.git'
-    scmDeveloperConnection = 'scm:git:git://github.com/xbib/standardnumber.git'
-}

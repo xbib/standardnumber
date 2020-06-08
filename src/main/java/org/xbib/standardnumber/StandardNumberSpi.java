@@ -6,7 +6,6 @@ import java.util.Locale;
  */
 abstract class StandardNumberSpi {
 
-    @SuppressWarnings("unchecked")
     public static StandardNumber getInstance(String type) throws NoSuchStandardNumberException {
         return getInstance(StandardNumberSpi.class.getPackage(), StandardNumberSpi.class.getClassLoader(), type);
     }
@@ -17,7 +16,7 @@ abstract class StandardNumberSpi {
         String className = thePackage.getName() + "." + type.toUpperCase(Locale.ROOT);
         try {
             Class<StandardNumber> clazz = (Class<StandardNumber>) classLoader.loadClass(className);
-            return clazz.newInstance();
+            return clazz.getDeclaredConstructor().newInstance();
         } catch (Exception e) {
             throw new NoSuchStandardNumberException(type);
         }
